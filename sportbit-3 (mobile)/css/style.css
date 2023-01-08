@@ -1,0 +1,264 @@
+/*Обнуляем внешние и внутренние отступы и границы*/
+*{ 
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+/*Меняем подсчет ширины блока для удобства последующей верстки*/
+*,*:before,*:after{
+	-moz-box-sizing:  border-box;
+	-webkit-box-sizing:  border-box;
+	box-sizing: border-box;
+}
+/*убираем линии обводки у некоторых браузеров*/
+:focus,:active{outline:  none}
+a:focus,a:active{outline: none}
+
+/*перечисляем html теги и делаем их блочными */
+nav,footer,header,aside{display:  block;}
+
+/*применяем к тегам ниже параметры, которые уравнивают поведение шрифтов и элементов для разных браузеров*/
+html,body{
+height:  100%;
+width: 100%;
+line-height: 1;
+font-size: 14px;
+-ms-text-size-adjust: 100%;
+-moz-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%;
+}
+
+/*обращаемся к тегам ниже, чтобы они наследовали семейство шрифта*/
+input,button,textarea{font-family: inherit;}
+
+/*убираем некоторые особенности для разных браузеров для тегов ниже*/
+input :-ms-clear{display: none;}
+button{cursor: pointer;}
+button :-moz-focus-inner {padding: 0;border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+/*обнуляем все заголовки h*/
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;line-height: 1.4em;}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+	width: 1110px;
+	margin: 0 auto;
+	/* такой margin выравнивает блок по центру */
+}
+
+.header {
+	padding-top: 60px;
+}
+
+p {
+	margin: 0;
+	line-height: 1.37em;
+}
+
+h1 {
+	font-size: 50px;
+	font-weight: 700;
+	line-height: 70px;
+}
+
+h2 {
+	text-align: center;
+	font-size: 40px;
+	font-weight: 700;
+	margin-bottom: 70px;
+}
+
+section {
+	padding-top: 120px;
+}
+
+.introtext {
+   font-size: 18px;
+	margin: 30px 0;
+	line-height: 25px;
+}
+
+.btn {
+	background: #000000;
+	border-radius: 100px;
+	color: #FFFFFF;
+	padding: 22px 70px;
+	text-decoration: none;
+	font-weight: 700;
+   font-size: 18px;
+	display: block;
+	width: 218px;
+	transition: all 0.5s ease;
+}
+
+.btn:hover {
+	background:  #313131;
+}
+
+.img {
+	width: 465px;
+	height: 465px;
+	margin-right: 180px;
+	display: block;
+}
+
+
+
+.offer-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 79px;
+}
+
+.offer {
+	width: 465px;
+}
+
+.logo {
+	margin: 0 auto;
+	display: block;
+	width: 145px;
+	height: 37px;
+}
+
+.digit {
+	width: 77px;
+	height: 77px;
+	border: 1px solid #000000;
+	border-radius: 20px;
+	font-size: 20px;
+	font-weight: 700;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 34px;
+	transition: all 0.5s ease;
+}
+
+.digit-item:hover .digit {
+	background: #000000;
+	color: #FFFFFF;
+}
+
+.digit-item {
+	display: flex;
+	align-items: center;
+}
+
+
+.digit-title{
+	font-weight: 700;
+	font-size: 30px;
+	margin-bottom: 11px;
+}
+
+.digit-text{
+	font-size: 18px;
+}
+
+.digits{
+	display: flex;
+	flex-direction: column;
+	gap: 41px;
+	width: 720px;
+	margin: 0 auto;
+}
+
+.practice-wrap {
+	background: linear-gradient(102deg, #E8FFE8 17.38%, #D1F0FF 81.25%);
+	border-radius: 60px;
+	display: flex;
+	align-items: center;
+	padding: 93px 168px 89px 122px;
+}
+
+.practice-block {
+	width: 432px;
+	
+}
+
+.practice-title {
+	text-align: left ;
+	font-weight: 700;
+	font-size: 40px;
+	margin: 0;
+}
+
+.practice-text {
+	margin: 24px 0;
+	width: 371px;
+	font-size: 18px;
+}
+
+.ball {
+	width: 287px;
+	height: 287px;
+	margin-right: 101px;
+}
+
+.footer{
+	padding: 120px 0;
+	text-align: center;
+	font-size: 15px;
+}
+
+/* Responsive */
+
+/* Large: 992px - 1199px */
+@media (max-width: 1199px) {
+	.container {
+		max-width: 960px;
+	}
+}
+
+/* Medium: 768px - 991px */
+@media (max-width: 991px) {
+	.container {
+		max-width: 720px;
+	}
+	.offer-wrapper {
+		flex-direction: column;
+		text-align: center;
+		gap: 51px;
+	}
+	.btn {
+		margin: 0 auto;
+	}
+	.practice-wrap {
+		flex-direction: column;
+		text-align: center;
+		padding: 101px 144px;
+	}
+	.ball {
+		margin: 0 auto;
+	}
+	.practice-text {
+		margin: 24px auto;
+	}
+	.practice-title {
+		text-align: center;
+	}
+}
+
+/* Small: 576px - 767px */
+@media (max-width: 767px) {
+	.container {
+		max-width: 540px;
+	}
+}
+
+/* Extra small: 0px (320px) - 575px */
+@media (max-width: 575px) {
+	.container {
+		padding: 0 15px;
+	}
+}
